@@ -36,6 +36,8 @@ Cada pergunta apresenta uma bandeira e quatro alternativas de resposta. Ao final
 
 - **Kaio** (kaio-sudo)
 - **Marcos** (mefnbraz)
+- **Rian** (maverick-smith)
+- **José Douglas** (Douglas-Medeiros1)
 
 ## 🎓 Finalidade acadêmica
 
