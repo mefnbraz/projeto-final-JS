@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acertar a Bandeira - Fácil</title>
+    <link rel="stylesheet" href="styles/style2.css">
+</head>
+
+<body>
+
+    <main class="jogo">
+
+        <h1>Acertar a Bandeira</h1>
+        <h2>Modo Fácil</h2>
+
+        <!-- Tela inicial -->
+        <section id="inicio">
+            <h3>Pronto para jogar?</h3>
+            <p>Descubra a qual país pertence cada bandeira!</p>
+            <button id="comecar">Começar jogo</button>
+        </section>
+
+        <!-- Tela do jogo -->
+        <section id="partida" class="escondido">
+
+            <div class="informacoes">
+                <span id="progresso">Bandeira 1 de 9</span>
+                <span id="pontuacao">Pontos: 0</span>
+            </div>
+
+            <div class="area-bandeira">
+                <img id="bandeira" src="" alt="Bandeira para adivinhar">
+            </div>
+
+            <h3>De qual país é esta bandeira?</h3>
+
+            <form id="form-resposta">
+                <input type="text" id="resposta" placeholder="Digite o nome do país" autocomplete="off" required>
+
+                <button type="submit" id="verificar">
+                    Responder
+                </button>
+            </form>
+
+            <p id="mensagem" aria-live="polite"></p>
+
+            <button id="proxima" class="escondido">
+                Próxima bandeira
+            </button>
+
+        </section>
+
+        <!-- Tela final -->
+        <section id="fim" class="escondido">
+            <h2>Fim de jogo!</h2>
+            <p id="resultado-final"></p>
+            <button id="reiniciar">Jogar novamente</button>
+        </section>
+
+        <a class="voltar" href="index.html">
+            Voltar ao menu
+        </a>
+
+    </main>
+
+    <script src="scripts/1scriptFacil.js"></script>
+
+</body>
+
+</html>

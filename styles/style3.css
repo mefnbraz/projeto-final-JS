@@ -1,0 +1,234 @@
+
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 40, 76);
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Estrutura principal */
+
+.jogo {
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(28px, 6vw, 42px);
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: rgb(255, 165, 0);
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Telas do jogo */
+
+#inicio,
+#partida,
+#fim {
+    background-color: rgb(12, 55, 92);
+    border: 1px solid rgba(255, 165, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px 20px;
+}
+
+/* Informações */
+
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Área da bandeira */
+
+.area-bandeira {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    min-height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bandeira {
+    width: 100%;
+    max-width: 320px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+/* Formulário */
+
+#form-resposta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#resposta {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+#resposta:focus {
+    border-color: orange;
+}
+
+/* Botões */
+
+button {
+    background-color: white;
+    color: rgb(0, 40, 76);
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: orange;
+    color: white;
+    transform: translateY(-2px);
+}
+
+#comecar {
+    background-color: rgb(255, 165, 0);
+    color: white;
+}
+
+#comecar:hover {
+    background-color: rgb(220, 130, 0);
+}
+
+#proxima {
+    width: 100%;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Respostas */
+
+#mensagem {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.correto {
+    color: #6bff9a;
+}
+
+.errado {
+    color: #ff7777;
+}
+
+/* Resultado final */
+
+#resultado-final {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#avaliacao {
+    color: orange;
+    font-size: 18px;
+}
+
+/* Voltar ao menu */
+
+.voltar {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: rgb(255, 165, 0);
+    text-decoration: none;
+}
+
+.voltar:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Esconder elementos */
+
+.escondido {
+    display: none !important;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+
+    #inicio,
+    #partida,
+    #fim {
+        padding: 25px 15px;
+    }
+
+    .area-bandeira {
+        min-height: 180px;
+        padding: 15px;
+    }
+
+    #bandeira {
+        max-height: 160px;
+    }
+
+    .informacoes {
+        font-size: 13px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

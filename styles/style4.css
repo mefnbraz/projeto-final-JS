@@ -1,0 +1,242 @@
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 40, 76);
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Estrutura principal */
+
+.jogo {
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(28px, 6vw, 42px);
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: rgb(255, 85, 85);
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Telas */
+
+#inicio,
+#partida,
+#fim {
+    background-color: rgb(12, 55, 92);
+    border: 1px solid rgba(255, 85, 85, 0.25);
+    border-radius: 15px;
+    padding: 30px 20px;
+}
+
+/* Informações */
+
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Bandeira */
+
+.area-bandeira {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    min-height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bandeira {
+    width: 100%;
+    max-width: 320px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+/* Alternativas */
+
+.alternativas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+
+button {
+    background-color: white;
+    color: rgb(0, 40, 76);
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: rgb(255, 85, 85);
+    color: white;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.alternativas button {
+    min-height: 65px;
+    overflow-wrap: anywhere;
+}
+
+/* Respostas */
+
+.alternativas button.correta {
+    background-color: #2eaa62;
+    color: white;
+}
+
+.alternativas button.incorreta {
+    background-color: #d93b3b;
+    color: white;
+}
+
+#mensagem {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#mensagem.correto {
+    color: #6bff9a;
+}
+
+#mensagem.errado {
+    color: #ff7777;
+}
+
+/* Botões principais */
+
+#comecar {
+    background-color: rgb(220, 55, 55);
+    color: white;
+}
+
+#comecar:hover {
+    background-color: rgb(180, 35, 35);
+}
+
+#proxima {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Resultado */
+
+#resultado-final {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#avaliacao {
+    color: rgb(255, 100, 100);
+    font-size: 18px;
+}
+
+/* Voltar */
+
+.voltar {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: rgb(255, 100, 100);
+    text-decoration: none;
+}
+
+.voltar:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Esconder elementos */
+
+.escondido {
+    display: none !important;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+
+    #inicio,
+    #partida,
+    #fim {
+        padding: 25px 15px;
+    }
+
+    .area-bandeira {
+        min-height: 180px;
+        padding: 15px;
+    }
+
+    #bandeira {
+        max-height: 160px;
+    }
+
+    .alternativas {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .informacoes {
+        font-size: 13px;
+    }
+
+    #comecar,
+    #proxima,
+    #reiniciar {
+        width: 100%;
+    }
+}

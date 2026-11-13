@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acertar a Bandeira - Difícil</title>
+    <link rel="stylesheet" href="styles/style4.css">
+</head>
+
+<body>
+
+    <main class="jogo">
+
+        <h1>Acertar a Bandeira</h1>
+        <h2>Modo Difícil</h2>
+
+        <!-- Tela inicial -->
+        <section id="inicio">
+            <h3>Preparado para o desafio final?</h3>
+
+            <p>
+                Teste seus conhecimentos com as
+                bandeiras mais difíceis do mundo!
+            </p>
+
+            <p>
+                Escolha uma das quatro alternativas.
+                Apenas uma está correta.
+            </p>
+
+            <p>São 10 bandeiras. Boa sorte!</p>
+
+            <button id="comecar">Começar jogo</button>
+        </section>
+
+        <!-- Tela da partida -->
+        <section id="partida" class="escondido">
+
+            <div class="informacoes">
+                <span id="progresso">Bandeira 1 de 10</span>
+                <span id="pontuacao">Pontos: 0</span>
+            </div>
+
+            <div class="area-bandeira">
+                <img id="bandeira" src="" alt="Bandeira para adivinhar">
+            </div>
+
+            <h3>De qual país é esta bandeira?</h3>
+
+            <!-- Alternativas -->
+            <div id="alternativas" class="alternativas">
+                <!-- Criadas automaticamente pelo JavaScript -->
+            </div>
+
+            <p id="mensagem" aria-live="polite"></p>
+
+            <button id="proxima" class="escondido">
+                Próxima bandeira
+            </button>
+
+        </section>
+
+        <!-- Tela final -->
+        <section id="fim" class="escondido">
+
+            <h2>Fim de jogo!</h2>
+
+            <p id="resultado-final"></p>
+            <p id="avaliacao"></p>
+
+            <button id="reiniciar">
+                Jogar novamente
+            </button>
+
+        </section>
+
+        <a class="voltar" href="index.html">
+            Voltar ao menu
+        </a>
+
+    </main>
+
+    <script src="scripts/3scriptDificil.js"></script>
+
+</body>
+
+</html>
